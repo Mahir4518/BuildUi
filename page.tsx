@@ -1,12 +1,7 @@
-import ProjectView from "@/modules/projects/components/project-view";
-import React from "react";
+import { redirect } from 'next/navigation';
 
-const Page = async ({ params}:{params:{projectId:string}}) => {
-  const { projectId } = await params;
-
-  return (
-    <ProjectView projectId={projectId} />
-  );
-};
-
-export default Page;
+export default function Dashboard() {
+  // Your dashboard components actually live on your home page (/)
+  // This smoothly redirects the /dashboard URL route directly to your home dashboard.
+  redirect('/');
+}
